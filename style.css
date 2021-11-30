@@ -1,0 +1,316 @@
+/* Шрифт родителя */
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(/fonts/Caviar_Dreams_Bold.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@keyframes navlinks {
+    60% {color: black;}
+    100% {
+        color: darksalmon;
+        transform: translateX(10px);
+    }
+}
+
+@keyframes orderlinks {
+    33% {
+        background-color: white;
+    }
+    66% {
+        
+        background-color: bisque;
+    }
+    100% {
+        left: 20pt;
+        transform: scale(1, 1);
+    }
+}
+
+body {
+    
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: repeating-linear-gradient(to right, bisque, white, bisque 5px);
+}
+
+header {
+    background-color: #fff;
+    height: 80pt;
+    margin-bottom: 20pt;
+    min-width: 650px;
+    position: relative;
+}
+
+main {
+    text-align: justify;
+    margin-left: 210px;
+    overflow: auto;
+}
+
+footer {
+    text-align: right;
+}
+
+.pos1 {
+    left: 0pt;
+    top: 0pt;
+    width: 140pt;
+    position: absolute;
+}
+
+.pos1 img {
+    height: 80pt;
+}
+
+.pos2 {
+    left: 140pt;
+    top: 24pt;
+    right: 0pt;
+    position: absolute;
+}
+
+.pos2 h1 {
+    font: bold italic 42pt Verdana;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 10pt;
+    margin: 0px;
+    background-color: darksalmon;
+}
+
+.pos3 {
+    left: 140pt;
+    top: -1pt;
+    right: 70pt;
+    position: absolute;
+}
+
+.pos3 h1 {
+   font: bold 24pt Verdana;
+   text-transform: uppercase;
+   text-align: right;
+   letter-spacing: 6pt;
+   margin: 0px;
+   color: darksalmon;
+}
+
+.pos4 {
+    position: absolute;
+    top: 0px;
+    right: 20pt;
+}
+
+p {
+    font-size: 14pt;
+}
+
+p.greeting {
+    font-size: 24pt;
+    margin-top: 0px;
+}
+
+
+
+.advertising {
+    margin-left: 30pt ;
+}
+
+div {
+    font-size: 12pt;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+.bigger {
+    font-size: 16pt;
+}
+
+/* Таблицы */
+
+ol {
+    list-style-type: upper-roman;
+}
+
+table.pricelist th, table.pricelist td {
+    border: grey thin solid;
+    padding: 4px;  
+}
+
+table.catalog {
+    border-collapse: collapse;
+    width: 70%;
+    min-width: 12cm;
+}
+
+table.catalog h3 {
+    font-family: "Caviar Dreams";
+    font-size: 20pt;
+    font-weight: bold;
+    font-variant: small-caps;
+    letter-spacing: 2pt;
+}
+
+table.catalog td {
+    border-top: black thin dotted;
+    border-bottom: black thin dotted;
+    padding: 10px;
+}
+
+table.catalog img {
+    width: 100%;
+}
+
+table.catalog h3::after {
+    content: ":";
+}
+
+table.pricelist thead th {
+    color: white;
+    background-color: grey;
+}
+
+table.catalog td p:first-of-type::first-letter {
+    font-size: 24px;
+}
+
+tfoot {
+    text-align: right;
+    font-style: italic;
+}
+
+table.catalog tr:first-child td {
+    border-top: none;
+    width: 50%;
+}
+
+table.catalog tr:last-child td {
+    border-bottom: none;
+}
+
+table.catalog p::first-letter {
+    vertical-align: text-top;
+}
+
+[colspan] {
+    text-align: center;
+}
+
+table.pricelist td:last-child:not(:only-child) {
+    background-color: lightgray;
+    border: none;
+}
+/* Панель навигации */
+
+nav {
+    float: left;
+    width: 150px;
+    margin: 10px 40px 20px 0px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav div, nav a {
+    font-size: 20pt;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+nav a {
+    display: block;
+}
+
+nav a:link, nav a:visited {
+    color: darkred;
+    text-decoration: none;
+}
+
+nav a:active, nav a:hover {
+    text-decoration: none;
+    animation-name: navlinks;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* подвал*/
+
+footer {
+    text-align: right;
+    background-color: white;
+    height: 120pt;
+    position: relative;
+    
+}
+
+
+footer a {
+    text-align: center;
+    display: inline-flex;
+    background-color: bisque;
+    font: 28px bold Verdana;
+    width: 150px;
+    height: 100px;
+    position:relative;
+    top: 20pt;
+    left: -240pt;
+    align-items: center;
+    transform: scale(0.2, 0.2);
+    animation-delay: 2s;
+    animation-name: orderlinks;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards ;
+}
+
+.take {
+    text-align: left;
+}
+
+/* формы */
+
+form {
+    width: 400px;
+    padding: 0px 10px;
+    border: thin dashed dimgrey;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    font: bold 20pt Verdana;
+    text-transform: uppercase;
+    width: 250px;
+    border: thin solid black;
+    border-radius: 0px;
+}
+
+button {
+    border-style: none;
+    padding: 0px;
+    height: 50px;
+}
+
+
+input {
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+}
+
+input[type=text]:valid {
+    border-color: green;
+}
+input[type=time]:valid {
+    border-color: green;
+}
+
+input[type=text]:invalid {
+    background-color: red;
+}
+
+input[type=time]:invalid {
+    background-color: red;
+}
+
+
+
+
