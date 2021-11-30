@@ -256,7 +256,7 @@ footer a {
     left: -240pt;
     align-items: center;
     transform: scale(0.2, 0.2);
-    animation-delay: 2s;
+    animation-delay: 0.5s;
     animation-name: orderlinks;
     animation-duration: 1.5s;
     animation-fill-mode: forwards ;
